@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function CreateShowEvents() {
   const [showEvents, setShowEvents] = useState([
     {
-      showEvent: '',
+      showEvent: 'beginner',
     },
   ])
 
@@ -39,12 +39,21 @@ function CreateShowEvents() {
             return (
               <div key={index}>
                 <label>Show Event</label>
-                <input
+                <select
                   type="text"
                   name="showEvent"
                   value={input.showEvent || ''}
                   onChange={(e) => handleChange(index, e)}
-                />
+                >
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="senior">Senior</option>
+                  <option value="advanced">Advanced</option>
+                  <option value="beginner-plate">Beginner-plate</option>
+                  <option value="intermediate-plate">Intermediate-plate</option>
+                  <option value="senior-plate">Senior-plate</option>
+                  <option value="advanced-plate">Advanced-plate</option>
+                </select>
                 {index ? (
                   <button type="button" onClick={() => removeShowEvent(index)}>
                     Remove

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+// import { Navigate } from 'react-router-dom'
 
 function CreateShowForm() {
+  // const navigate = useNavigate()
   const [showDetails, setShowDetails] = useState([
     {
       club: '',
@@ -25,7 +27,9 @@ function CreateShowForm() {
 
   function handleSubmit(event) {
     event.preventDefault()
+
     console.log(showDetails)
+    // navigate('/home')
   }
 
   return (

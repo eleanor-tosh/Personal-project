@@ -31,3 +31,72 @@
 input {
   margin: 10px 5px;
 }
+
+.poster {
+  background-color:aliceblue;
+  width: 50%;
+  border: 3px solid black;
+  margin: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.poster-content {
+text-align: center;
+padding: 25px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.poster-image {
+  float:left;
+}
+
+.poster-title {
+  font-size: 4rem;
+  
+}
+
+.poster-image {
+  border: 3px solid lightgray;
+  width: 175px;
+  height: 175px;
+  margin-right: 25px
+}
+
+.poster-host {
+  color: rgb(80, 80, 212);
+  line-height: 2rem;
+  font-size: 1.5rem;
+  text-align: left;
+  border-bottom: 3px solid rgb(80, 80, 212);
+}
+
+.poster-times {
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.poster-notes {
+  border-bottom: 3px solid rgb(80, 80, 212);
+  font-style: italic;
+}
+
+.poster-times {
+  color: rgb(77, 75, 75);
+}
+
+.poster-start {
+  color: red;
+}
+
+.poster-events {
+  line-height: 0.5rem;
+  margin:1rem;
+}
+
+.poster-event-title {
+  font-size: 2rem;
+  text-decoration: underline;
+}

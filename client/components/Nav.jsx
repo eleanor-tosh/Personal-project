@@ -27,13 +27,13 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/myevents" activeclassname="active">
-            My Events
+          <NavLink to="/myshows" activeclassname="active">
+            My Shows
           </NavLink>
         </li>
         <li>
-          <NavLink to="/upcomingevents" activeclassname="active">
-            Upcoming Events
+          <NavLink to="/upcomingshows" activeclassname="active">
+            Upcoming Shows
           </NavLink>
         </li>
         <li>
