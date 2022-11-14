@@ -17,7 +17,7 @@ function Poster() {
         </div>
         <p>Cost: $3 per class for club members, $4 for non members</p>
         <div className="poster-times">
-          <h2 className="poster-start">Start time: 9:00am</h2>
+          <h2 className="poster-start">Setup time: 9:00am</h2>
           <h2>Entries by 9:30am</h2>
           <h2>Start: 10:00am</h2>
           <br />

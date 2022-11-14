@@ -6,8 +6,9 @@ import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
 import CreateShowForm from './CreateShowForm'
-import CreateShowEvents from './CreateShowEvents'
+// import CreateShowEvents from './CreateShowEvents'
 import Poster from './Poster'
+import MyDogs from './MyDogs'
 
 const App = () => {
   return (
@@ -19,8 +20,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/createshowform" element={<CreateShowForm />} />
-          <Route path="/createshowevents" element={<CreateShowEvents />} />
+          {/* <Route path="/createshowevents" element={<CreateShowEvents />} /> */}
           <Route path="/poster" element={<Poster />} />
+          <Route path="/mydogs" element={<MyDogs />} />
         </Routes>
         <Footer />
       </div>

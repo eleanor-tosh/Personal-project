@@ -32,6 +32,20 @@ input {
   margin: 10px 5px;
 }
 
+.dog-card {
+  border: 3px solid black;
+  width: 25%;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
 .poster {
   background-color:aliceblue;
   width: 50%;
