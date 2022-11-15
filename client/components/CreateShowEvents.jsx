@@ -9,7 +9,7 @@ function CreateShowEvents() {
 
   let handleChange = (i, e) => {
     let newShowEvent = [...showEvents]
-    newShowEvent[i][e.target.showEvent] = e.target.value
+    newShowEvent[i].showEvent = e.target.value
     setShowEvents(newShowEvent)
     console.log(e.target.value)
   }

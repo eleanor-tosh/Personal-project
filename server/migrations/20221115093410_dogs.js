@@ -8,6 +8,7 @@ exports.up = function (knex) {
     table.string('name')
     table.string('image')
     table.string('reg_name')
+    table.string('owner_name')
     table.integer('fly_num')
     table.date('DOB')
     table.integer('height_mm')
