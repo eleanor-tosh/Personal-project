@@ -1,11 +1,13 @@
 import React from 'react'
 
-function MyDogs() {
+function MyDogs(props) {
+  console.log(props)
+
   return (
     <div>
       <h1>My Dogs</h1>
       <div className="dog-card">
-        <img />
+        <img className="card-image" />
         <h2>Holly</h2>
         <p>Registered Name: Horrible Holly</p>
         <p>Main Handler: Eleanor Tosh</p>
@@ -20,7 +22,7 @@ function MyDogs() {
         <p>Intermediate: 16.5</p>
         <p>Senior: 8</p>
         <p>Advanced: 0</p>
-        <p>Total:36.5</p>
+        <p>Total: 36.5</p>
       </div>
       <div className="dog-card">
         <img />
