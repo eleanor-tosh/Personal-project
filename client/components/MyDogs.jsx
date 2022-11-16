@@ -1,5 +1,6 @@
 import { getDogs } from '../apiClient'
 import React, { useState, useEffect } from 'react'
+import { Link, Navigate } from 'react-router-dom'
 
 function MyDogs() {
   const [dog, setDog] = useState([])
@@ -22,7 +23,7 @@ function MyDogs() {
         return (
           <div className="dog-card" key={dog.dog_id}>
             <img className="card-image" src={`/images/${dog.image}`} />
-            <h2>{dog.name}</h2>
+            <h2>{dog.dog_name}</h2>
             <p>Registered Name: {dog.reg_name}</p>
             <p>Main Handler: {dog.owner_name}</p>
             <p>Flygility Number: {dog.fly_num}</p>
@@ -36,10 +37,19 @@ function MyDogs() {
             <p>Intermediate: {dog.int_points}</p>
             <p>Senior: {dog.sen_points}</p>
             <p>Advanced: {dog.adv_points}</p>
-            <p>Total: </p>
+            <Link to={`/dog/${dog.dog_id}/details`}>
+              <button>Edit Details</button>
+            </Link>
+
+            <Link to={`/dog/${dog.dog_id}/points`}>
+              <button>Edit Points</button>{' '}
+            </Link>
           </div>
         )
       })}
+      <Link to={`/dog/add`}>
+        <button>Add Dog</button>
+      </Link>
     </div>
   )
 }

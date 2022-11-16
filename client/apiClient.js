@@ -8,3 +8,33 @@ import request from 'superagent'
 export function getDogs() {
   return request.get(`/api/v1/dog`).then((response) => response.body)
 }
+
+export function addDog(dog) {
+  return request
+    .post('/api/v1/dog')
+    .send(dog)
+    .then((res) => {
+      return res.body
+    })
+    .catch(console.error)
+}
+
+export function patchDog(dog_id, dog) {
+  return request
+    .patch(`/v1/posts/${dog_id}`)
+    .send(dog)
+    .then((res) => {
+      return res.body
+    })
+    .catch(console.error)
+}
+
+export function patchPopints(dog_id, dog) {
+  return request
+    .patch(`/v1/posts/${dog_id}`)
+    .send(dog)
+    .then((res) => {
+      return res.body
+    })
+    .catch(console.error)
+}

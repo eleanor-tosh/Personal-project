@@ -4,7 +4,7 @@ function Header() {
   return (
     <section>
       <div className="header">
-        <h1>Flygility Show Planner</h1>
+        <h1>Flygility Tournement Planner</h1>
       </div>
     </section>
   )

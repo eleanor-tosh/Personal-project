@@ -38,7 +38,7 @@ function CreateShowEvents() {
           {showEvents.map((input, index) => {
             return (
               <div key={index}>
-                <label>Show Event</label>
+                <label>Show Event: </label>
                 <select
                   type="text"
                   name="showEvent"

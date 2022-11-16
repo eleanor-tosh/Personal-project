@@ -1,3 +1,14 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .active {
   font-weight: bold;
 }
@@ -6,10 +17,18 @@
   list-style-type: none;
 }
 
-.navigation {
-  float: left;
-  width: 15%;
+
+nav li {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+}
+
+nav {
   background-color: aqua;
+  border-top: 2px solid #213C73;
+  border-bottom: 2px solid #213C73;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .main-content {
@@ -23,8 +42,6 @@
 }
 
 .event-form {
-  float: right;
-  width: 85%;
   background-color: bisque;
   border-bottom: 2px solid black;
 }
@@ -33,15 +50,15 @@ input {
   margin: 10px 5px;
 }
 
+
 .dog-card {
 float: left;
 background-color: aliceblue;
   border: 3px solid black;
-  width: 350px;
+  width: 375px;
   margin: 5px; 
   padding: 10px 15px;
   line-height: 0.75rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .card-image {

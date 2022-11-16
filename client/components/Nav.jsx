@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 function Nav() {
   return (
-    <nav className="navigation">
-      <h2>Nav</h2>
+    <nav>
       <ul className="navList">
         <li>
           <NavLink to="/" activeclassname="active">
