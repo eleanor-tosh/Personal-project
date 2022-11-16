@@ -46,7 +46,7 @@ background-color: aliceblue;
 
 .card-image {
   border: 3px solid lightgray;
-  width: 200px;
+  width: auto;
   height: 200px;
   margin-right: 25px;
 }

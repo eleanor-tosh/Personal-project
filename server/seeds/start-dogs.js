@@ -9,7 +9,7 @@ exports.seed = async function (knex) {
     {
       dog_id: 1,
       name: 'Holly',
-      image: 'server/public/images/Holly.jpg',
+      image: 'Holly.jpg',
       reg_name: 'Horrible Holly',
       owner_name: 'Eleanor Tosh',
       fly_num: '15/813/1',
@@ -25,7 +25,7 @@ exports.seed = async function (knex) {
     {
       dog_id: 2,
       name: 'Mera',
-      image: 'server/public/images/Mera.jpg',
+      image: 'Mera.jpg',
       reg_name: 'Mordor Logic in a Nightmare',
       owner_name: 'Eleanor Tosh',
       fly_num: '15/813/2',
@@ -41,7 +41,7 @@ exports.seed = async function (knex) {
     {
       dog_id: 3,
       name: 'Siren',
-      image: 'server/public/images/Siren-in-tiny-bed.jpg',
+      image: 'Siren-in-tiny-bed.jpg',
       reg_name: 'Enchanted by the Siren Song',
       owner_name: 'Eleanor Tosh',
       fly_num: '',

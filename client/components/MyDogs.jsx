@@ -1,65 +1,45 @@
-import React from 'react'
+import { getDogs } from '../apiClient'
+import React, { useState, useEffect } from 'react'
 
-function MyDogs(props) {
-  console.log(props)
+function MyDogs() {
+  const [dog, setDog] = useState([])
+
+  useEffect(() => {
+    getDogs()
+      .then((resDogs) => {
+        setDog(resDogs)
+      })
+      .catch((err) => console.error(err.message))
+  }, [])
+
+  console.log(dog)
 
   return (
     <div>
       <h1>My Dogs</h1>
-      <div className="dog-card">
-        <img className="card-image" />
-        <h2>Holly</h2>
-        <p>Registered Name: Horrible Holly</p>
-        <p>Main Handler: Eleanor Tosh</p>
-        <p>Flygility Number: 15/813/1</p>
-        <p>DOB: 27/11/2011</p>
-        <p>Height: 286mm</p>
-        <p>Height Category: Micro</p>
-        <p>Grade: Int-Sen</p>
 
-        <h2>Points</h2>
-        <p>Beginner: 12</p>
-        <p>Intermediate: 16.5</p>
-        <p>Senior: 8</p>
-        <p>Advanced: 0</p>
-        <p>Total: 36.5</p>
-      </div>
-      <div className="dog-card">
-        <img />
-        <h2>Holly</h2>
-        <p>Registered Name: Horrible Holly</p>
-        <p>Main Handler: Eleanor Tosh</p>
-        <p>Flygility Number: 15/813/1</p>
-        <p>DOB: 27/11/2011</p>
-        <p>Height: 286mm</p>
-        <p>Height Category: Micro</p>
-        <p>Grade: Int-Sen</p>
+      {dog.map((dog) => {
+        return (
+          <div className="dog-card" key={dog.dog_id}>
+            <img className="card-image" src={`/images/${dog.image}`} />
+            <h2>{dog.name}</h2>
+            <p>Registered Name: {dog.reg_name}</p>
+            <p>Main Handler: {dog.owner_name}</p>
+            <p>Flygility Number: {dog.fly_num}</p>
+            <p>DOB: {dog.DOB}</p>
+            <p>Height: {dog.height_mm}mm</p>
+            <p>Height Category: {dog.height_category}</p>
+            <p>Grade: {dog.grade}</p>
 
-        <h2>Points</h2>
-        <p>Beginner: 12</p>
-        <p>Intermediate: 16.5</p>
-        <p>Senior: 8</p>
-        <p>Advanced: 0</p>
-        <p>Total:36.5</p>
-      </div>
-      <div className="dog-card">
-        <img />
-        <h2>Holly</h2>
-        <p>Registered Name: Horrible Holly</p>
-        <p>Main Handler: Eleanor Tosh</p>
-        <p>Flygility Number: 15/813/1</p>
-        <p>DOB: 27/11/2011</p>
-        <p>Height: 286mm</p>
-        <p>Height Category: Micro</p>
-        <p>Grade: Int-Sen</p>
-
-        <h2>Points</h2>
-        <p>Beginner: 12</p>
-        <p>Intermediate: 16.5</p>
-        <p>Senior: 8</p>
-        <p>Advanced: 0</p>
-        <p>Total:36.5</p>
-      </div>
+            <h2>Points</h2>
+            <p>Beginner: {dog.beg_points}</p>
+            <p>Intermediate: {dog.int_points}</p>
+            <p>Senior: {dog.sen_points}</p>
+            <p>Advanced: {dog.adv_points}</p>
+            <p>Total: </p>
+          </div>
+        )
+      })}
     </div>
   )
 }

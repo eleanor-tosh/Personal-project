@@ -9,8 +9,20 @@ import CreateShowForm from './CreateShowForm'
 // import CreateShowEvents from './CreateShowEvents'
 import Poster from './Poster'
 import MyDogs from './MyDogs'
+// import { getDogs } from '../apiClient'
 
 const App = () => {
+  // const [dog, setDog] = useState([])
+
+  // useEffect(() => {
+  //   getDogs()
+  //     .then((resDogs) => {
+  //       console.log(resDogs)
+  //       setDog(resDogs)
+  //     })
+  //     .catch((err) => console.error(err.message))
+  // }, [])
+
   return (
     <>
       <div>
