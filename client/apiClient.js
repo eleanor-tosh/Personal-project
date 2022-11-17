@@ -21,7 +21,7 @@ export function addDog(dog) {
 
 export function patchDog(dog_id, dog) {
   return request
-    .patch(`/v1/posts/${dog_id}`)
+    .patch(`/v1/dog/${dog_id}`)
     .send(dog)
     .then((res) => {
       return res.body
@@ -31,7 +31,7 @@ export function patchDog(dog_id, dog) {
 
 export function patchPoints(dog_id, dog) {
   return request
-    .patch(`/v1/posts/${dog_id}`)
+    .patch(`/v1/dog/${dog_id}`)
     .send(dog)
     .then((res) => {
       return res.body

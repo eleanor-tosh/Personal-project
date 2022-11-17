@@ -33,19 +33,18 @@ function EditDog(props) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    // if (props.variant === 'edit') {
-    //   return patchDog(dog_id, dogDetails).then(() => {
-
-    navigate('/mydogs')
-    //   })
-    // }
+    if (props.variant === 'details') {
+      return patchDog(dog_id, dogDetails).then(() => {
+        navigate('/mydogs')
+      })
+    }
   }
 
   return (
     <div>
       <form>
-        {props.variant === 'edit' ? (
-          <h1>Edit Dog Details Form</h1>
+        {props.variant === 'details' ? (
+          <h1>Edit Dog Details Form for {dogDetails.dog_name}</h1>
         ) : (
           <h1>New Dog Details Form</h1>
         )}
