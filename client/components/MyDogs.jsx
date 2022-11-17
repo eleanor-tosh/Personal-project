@@ -1,9 +1,10 @@
 import { getDogs } from '../apiClient'
 import React, { useState, useEffect } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
 function MyDogs() {
   const [dog, setDog] = useState([])
+  const { dog_id } = useParams()
 
   useEffect(() => {
     getDogs()

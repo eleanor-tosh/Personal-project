@@ -29,7 +29,7 @@ export function patchDog(dog_id, dog) {
     .catch(console.error)
 }
 
-export function patchPopints(dog_id, dog) {
+export function patchPoints(dog_id, dog) {
   return request
     .patch(`/v1/posts/${dog_id}`)
     .send(dog)

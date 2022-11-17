@@ -25,8 +25,11 @@ const App = () => {
           <Route path="/poster" element={<Poster />} />
           <Route path="/mydogs" element={<MyDogs />} />
           <Route path="/dog/add" element={<AddDog />} />
-          <Route path="/dog/5/details" element={<EditDog />} />
-          <Route path="/dog/${dog.dog_id}/points" element={<EditPoints />} />
+          <Route
+            path="/dog/:dog_id/details"
+            element={<EditDog variant="details" />}
+          />
+          <Route path="/dog/:dog_id/points" element={<EditPoints />} />
         </Routes>
         <Footer />
       </div>
