@@ -22,7 +22,7 @@ function UpcomingShows() {
             <h2>Hosted By: {show.host_club}</h2>
             <h2>Location {show.location}</h2>
             <p>Date: {date}</p>
-            <Link to={`/poster`}>
+            <Link to={`/poster/${show.show_id}`}>
               <button>More Details</button>
             </Link>
             <Link to={`/poster`}>
@@ -37,7 +37,7 @@ function UpcomingShows() {
           </div>
         )
       })}
-      <Link to={`/poster`}>
+      <Link to={`/createshowform`}>
         <button className="wide-button">Create Show</button>
       </Link>
     </div>

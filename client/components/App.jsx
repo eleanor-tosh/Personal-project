@@ -31,12 +31,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/createshowform" element={<CreateShowForm />} />
           {/* <Route path="/createshowevents" element={<CreateShowEvents />} /> */}
-          <Route path="/poster" element={<Poster />} />
+
           <Route path="/mydogs" element={<MyDogs />} />
           <Route path="/mydetails" element={<MyDetails />} />
           <Route path="/upcomingshows" element={<UpcomingShows />} />
           <Route path="/dog/add" element={<AddDog />} />
-
+          <Route path="/poster/:show_id" element={<Poster />} />
           <Route path="/dog/:dog_id/details" element={<EditDog />} />
           <Route path="/dog/:dog_id/points" element={<EditPoints />} />
         </Routes>
