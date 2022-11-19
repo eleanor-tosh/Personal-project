@@ -7,6 +7,7 @@ module.exports = { getDogs, addDog, patchDog, patchPoints }
 function getDogs(db = connection) {
   return db('dogs').select()
 }
+
 function addDog(dog, db = connection) {
   return db('dogs').insert(dog)
 }

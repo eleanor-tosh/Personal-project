@@ -1,5 +1,7 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Route, Routes, BrowserRoutes as Router } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { fetchDogs } from '../actions'
 
 import Nav from './Nav'
 import Header from './Header'
@@ -12,7 +14,12 @@ import AddDog from './AddDog'
 import EditDog from './EditDog'
 import EditPoints from './EditPoints'
 
-const App = () => {
+function App() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchDogs())
+  }, [])
+
   return (
     <>
       <div className="app">
@@ -25,10 +32,7 @@ const App = () => {
           <Route path="/poster" element={<Poster />} />
           <Route path="/mydogs" element={<MyDogs />} />
           <Route path="/dog/add" element={<AddDog />} />
-          <Route
-            path="/dog/:dog_id/details"
-            element={<EditDog variant="details" />}
-          />
+          <Route path="/dog/:dog_id/details" element={<EditDog />} />
           <Route path="/dog/:dog_id/points" element={<EditPoints />} />
         </Routes>
         <Footer />

@@ -1,26 +1,32 @@
 import { getDogs } from '../apiClient'
 import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { fetchDogs } from '../actions'
 
 function MyDogs() {
-  const [dog, setDog] = useState([])
-  const { dog_id } = useParams()
+  const displayDogs = useSelector((state) => state.dogDetails)
+  const dispatch = useDispatch()
+
+  // const [dog, setDog] = useState([])
+  // const { dog_id } = useParams()
 
   useEffect(() => {
-    getDogs()
-      .then((resDogs) => {
-        setDog(resDogs)
-      })
-      .catch((err) => console.error(err.message))
+    dispatch(fetchDogs())
+    //   getDogs()
+    //     .then((resDogs) => {
+    //       dispatch(fetchDogs(resDogs))
+    //       // setDog(resDogs)
+    //       console.log(resDogs)
+    //     })
+    //     .catch((err) => console.error(err.message))
   }, [])
-
-  console.log(dog)
 
   return (
     <div>
       <h1>My Dogs</h1>
 
-      {dog.map((dog) => {
+      {displayDogs?.map((dog) => {
         return (
           <div className="dog-card" key={dog.dog_id}>
             <img className="card-image" src={`/images/${dog.image}`} />
