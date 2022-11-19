@@ -47,7 +47,7 @@ function MyDogs() {
         )
       })}
       <Link to={`/dog/add`}>
-        <button>Add Dog</button>
+        <button className="wide-button">Add Dog</button>
       </Link>
     </div>
   )

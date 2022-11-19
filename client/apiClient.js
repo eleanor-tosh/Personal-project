@@ -22,6 +22,12 @@ export function getOwners() {
   })
 }
 
+export function getShows() {
+  return request.get(`/api/v1/dog/shows/`).then((response) => {
+    return response.body
+  })
+}
+
 // export function addDog(dog) {
 //   return request
 //     .post('/api/v1/dog')

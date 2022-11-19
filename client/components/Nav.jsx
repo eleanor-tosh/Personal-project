@@ -26,11 +26,6 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/myshows" activeclassname="active">
-            My Shows
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="/upcomingshows" activeclassname="active">
             Upcoming Shows
           </NavLink>

@@ -19,6 +19,14 @@ router.get('/mydetails', (req, res) => {
     .catch(console.error)
 })
 
+router.get('/shows', (req, res) => {
+  db.getShows()
+    .then((owner) => {
+      res.json(owner)
+    })
+    .catch(console.error)
+})
+
 //Add Dog
 // router.post('/', (req, res) => {
 //   const dog = req.body
