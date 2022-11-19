@@ -1,33 +1,36 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { addDog } from '../actions'
+import { submitDog } from '../actions'
 
 function AddDog() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  const [dogDetails, setDogDetails] = useState({
+  const [newDog, setNewDog] = useState({
     dog_name: '',
     reg_name: '',
     owner_name: '',
     fly_num: '',
     DOB: '',
     height_mm: '',
-    height_category: '',
-    grade: '',
+    height_category: 'micro',
+    grade: 'Beg-Int',
+    active: 'training',
+    image: 'cartooncollie.jpg',
   })
 
   function handleChange(event) {
     const { name, value } = event.target
-    setDogDetails((result) => {
+    setNewDog((result) => {
       return { ...result, [name]: value }
     })
   }
 
   function handleSubmit(event) {
     event.preventDefault()
-    // dispatch(patchDog(dogDetails))
+    dispatch(submitDog(newDog))
+    setNewDog('')
     navigate('/mydogs')
   }
   return (
@@ -53,7 +56,7 @@ function AddDog() {
           <input type="integer" name="fly_num" onChange={handleChange} />
 
           <label>DOB: </label>
-          <input type="date" name="DOB" value={''} onChange={handleChange} />
+          <input type="date" name="DOB" onChange={handleChange} />
 
           <label>Height in mm: </label>
           <input type="integer" name="height_mm" onChange={handleChange} />
@@ -77,6 +80,16 @@ function AddDog() {
             <option value="Int-Sen">Int-Sen</option>
             <option value="Sen-Adv">Sen-Adv</option>
           </select>
+
+          <label>Grade: </label>
+          <select type="text" required name="active" onChange={handleChange}>
+            <option value="training">training</option>
+            <option value="competing">competing</option>
+            <option value="retired">retired</option>
+          </select>
+
+          <label>Image: </label>
+          <input type="text" name="image" onChange={handleChange} />
         </form>
         <button onClick={handleSubmit} type="submit">
           Submit

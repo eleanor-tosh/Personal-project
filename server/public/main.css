@@ -171,3 +171,12 @@ button {
   bottom: 0px;
   width: 100%;
 }
+
+.event-checkboxes {
+  width: 50%;
+}
+
+.checkboxes {
+  margin: 10px 5px;
+  width: 20%
+}

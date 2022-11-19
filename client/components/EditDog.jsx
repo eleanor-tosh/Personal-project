@@ -9,16 +9,20 @@ function EditDog() {
   const dispatch = useDispatch()
   const { dog_id } = useParams()
   const displayDog = useSelector((state) => state.dogDetails)
-  const [dogDetails, setDogDetails] = useState({
-    dog_name: '',
-    reg_name: '',
-    owner_name: '',
-    fly_num: '',
-    DOB: '',
-    height_mm: '',
-    height_category: '',
-    grade: '',
-  })
+  const [dogDetails, setDogDetails] = useState(displayDog)
+
+  // ({
+  //   dog_name: '',
+  //   reg_name: '',
+  //   owner_name: '',
+  //   fly_num: '',
+  //   DOB: '',
+  //   height_mm: '',
+  //   height_category: '',
+  //   grade: '',
+  // })
+
+  console.log(displayDog)
 
   const selectedDog = displayDog.find((dog) => dog_id == dog.dog_id)
   if (!selectedDog) {
@@ -26,12 +30,12 @@ function EditDog() {
   }
 
   function handleChange(event) {
-    setDogDetails(event.target.value)
     console.log(event.target.value)
     // const { name, value } = event.target
     // setDogDetails((result) => {
     //   return { ...result, [name]: value }
     // })
+    setDogDetails(event.target.value)
   }
 
   function handleSubmit(event) {

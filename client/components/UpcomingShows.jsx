@@ -28,7 +28,7 @@ function UpcomingShows() {
             <Link to={`/poster`}>
               <button>Edit Details</button>
             </Link>
-            <Link to={`/poster`}>
+            <Link to={`/entershow`}>
               <button>Enter Show</button>
             </Link>
             <Link to={`/poster`}>
