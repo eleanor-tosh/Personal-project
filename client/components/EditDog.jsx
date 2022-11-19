@@ -9,45 +9,35 @@ function EditDog() {
   const dispatch = useDispatch()
   const { dog_id } = useParams()
   const displayDog = useSelector((state) => state.dogDetails)
+  const [dogDetails, setDogDetails] = useState({
+    dog_name: '',
+    reg_name: '',
+    owner_name: '',
+    fly_num: '',
+    DOB: '',
+    height_mm: '',
+    height_category: '',
+    grade: '',
+  })
 
   const selectedDog = displayDog.find((dog) => dog_id == dog.dog_id)
   if (!selectedDog) {
     return <div></div>
   }
 
-  // const [dogDetails, setDogDetails] = useState({
-  //   dog_name: '',
-  //   reg_name: '',
-  //   owner_name: '',
-  //   fly_num: '',
-  //   DOB: '',
-  //   height_mm: '',
-  //   height_category: '',
-  //   grade: '',
-  // })
-
-  // useEffect(() => {
-  // getDogs()
-  //   .then((resDogs) => {
-  //     setDogDetails(resDogs.find((dog) => dog.dog_id == +dog_id))
-  //   })
-  //   .catch((err) => console.error(err.message))
-  // }, [])
-
-  const handleChange = (event) => {
-    const { name, value } = event.target
-    setDogDetails((result) => {
-      return { ...result, [name]: value }
-    })
+  function handleChange(event) {
+    setDogDetails(event.target.value)
+    console.log(event.target.value)
+    // const { name, value } = event.target
+    // setDogDetails((result) => {
+    //   return { ...result, [name]: value }
+    // })
   }
 
   function handleSubmit(event) {
     event.preventDefault()
-    dispatch(patchDog())
+    // dispatch(patchDog(dogDetails))
     navigate('/mydogs')
-    // return patchDog(dog_id, dogDetails).then(() => {
-    //   navigate('/mydogs')
-    // })
   }
 
   return (

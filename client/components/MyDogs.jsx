@@ -34,6 +34,7 @@ function MyDogs() {
             <p>Intermediate: {dog.int_points}</p>
             <p>Senior: {dog.sen_points}</p>
             <p>Advanced: {dog.adv_points}</p>
+
             <Link to={`/dog/${dog.dog_id}/details`}>
               <button>Edit Details</button>
             </Link>

@@ -13,6 +13,7 @@ import MyDogs from './MyDogs'
 import AddDog from './AddDog'
 import EditDog from './EditDog'
 import EditPoints from './EditPoints'
+import MyDetails from './MyDetails'
 
 function App() {
   const dispatch = useDispatch()
@@ -31,7 +32,9 @@ function App() {
           {/* <Route path="/createshowevents" element={<CreateShowEvents />} /> */}
           <Route path="/poster" element={<Poster />} />
           <Route path="/mydogs" element={<MyDogs />} />
+          <Route path="/mydetails" element={<MyDetails />} />
           <Route path="/dog/add" element={<AddDog />} />
+
           <Route path="/dog/:dog_id/details" element={<EditDog />} />
           <Route path="/dog/:dog_id/points" element={<EditPoints />} />
         </Routes>

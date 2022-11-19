@@ -2,10 +2,14 @@ const knex = require('knex')
 const config = require('./knexfile').development
 const connection = knex(config)
 
-module.exports = { getDogs, addDog, patchDog, patchPoints }
+module.exports = { getDogs, addDog, patchDog, patchPoints, getOwners }
 
 function getDogs(db = connection) {
   return db('dogs').select()
+}
+
+function getOwners(db = connection) {
+  return db('owners').select()
 }
 
 function addDog(dog, db = connection) {

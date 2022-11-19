@@ -16,6 +16,12 @@ export function getDogs() {
   })
 }
 
+export function getOwners() {
+  return request.get(`/api/v1/mydetails/`).then((response) => {
+    return response.body
+  })
+}
+
 // export function addDog(dog) {
 //   return request
 //     .post('/api/v1/dog')

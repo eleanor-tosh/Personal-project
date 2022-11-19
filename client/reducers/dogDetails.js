@@ -1,15 +1,17 @@
-import { SET_DOGS } from '../actions'
+import { SET_DOGS, SET_OWNERS } from '../actions'
 
 const initialState = []
 
-const reducer = (state = initialState, action) => {
+const reducers = (state = initialState, action) => {
   const { type, payload } = action
   switch (type) {
     case SET_DOGS:
+      return payload
+    case SET_OWNERS:
       return payload
     default:
       return state
   }
 }
 
-export default reducer
+export default reducers
