@@ -1,28 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getDogs, patchDog } from '../apiClient'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchDogs, patchDog } from '../apiClient'
+import { getByDisplayValue } from '@testing-library/react'
 
-function EditDog(props) {
+function EditDog() {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const { dog_id } = useParams()
-  const [dogDetails, setDogDetails] = useState({
-    dog_name: '',
-    reg_name: '',
-    owner_name: '',
-    fly_num: '',
-    DOB: '',
-    height_mm: '',
-    height_category: '',
-    grade: '',
-  })
+  const displayDog = useSelector((state) => state.dogDetails)
 
-  useEffect(() => {
-    getDogs()
-      .then((resDogs) => {
-        setDogDetails(resDogs.find((dog) => dog.dog_id == +dog_id))
-      })
-      .catch((err) => console.error(err.message))
-  }, [])
+  const selectedDog = displayDog.find((dog) => dog_id == dog.dog_id)
+  if (!selectedDog) {
+    return <div></div>
+  }
+
+  // const [dogDetails, setDogDetails] = useState({
+  //   dog_name: '',
+  //   reg_name: '',
+  //   owner_name: '',
+  //   fly_num: '',
+  //   DOB: '',
+  //   height_mm: '',
+  //   height_category: '',
+  //   grade: '',
+  // })
+
+  // useEffect(() => {
+  // getDogs()
+  //   .then((resDogs) => {
+  //     setDogDetails(resDogs.find((dog) => dog.dog_id == +dog_id))
+  //   })
+  //   .catch((err) => console.error(err.message))
+  // }, [])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -33,22 +43,24 @@ function EditDog(props) {
 
   function handleSubmit(event) {
     event.preventDefault()
-    return patchDog(dog_id, dogDetails).then(() => {
-      navigate('/mydogs')
-    })
+    dispatch(patchDog())
+    navigate('/mydogs')
+    // return patchDog(dog_id, dogDetails).then(() => {
+    //   navigate('/mydogs')
+    // })
   }
 
   return (
     <div>
       <form>
-        <h1>Edit Dog Details Form for {dogDetails.dog_name}</h1>
+        <h1>Edit Dog Details Form for {selectedDog.dog_name}</h1>
 
         <label>Dogs Name: </label>
         <input
           type="text"
           required
           name="dog_name"
-          value={dogDetails.dog_name}
+          value={selectedDog.dog_name}
           onChange={handleChange}
         />
 
@@ -56,7 +68,7 @@ function EditDog(props) {
         <input
           type="text"
           name="reg_name"
-          value={dogDetails.reg_name}
+          value={selectedDog.reg_name}
           onChange={handleChange}
         />
 
@@ -65,7 +77,7 @@ function EditDog(props) {
           type="text"
           required
           name="owner_name"
-          value={dogDetails.owner_name}
+          value={selectedDog.owner_name}
           onChange={handleChange}
         />
 
@@ -73,7 +85,7 @@ function EditDog(props) {
         <input
           type="integer"
           name="fly_num"
-          value={dogDetails.fly_num}
+          value={selectedDog.fly_num}
           onChange={handleChange}
         />
         {/* 
@@ -89,7 +101,7 @@ function EditDog(props) {
         <input
           type="integer"
           name="height_mm"
-          value={dogDetails.height_mm}
+          value={selectedDog.height_mm}
           onChange={handleChange}
         />
 
@@ -98,7 +110,7 @@ function EditDog(props) {
           type="text"
           required
           name="height_category"
-          value={dogDetails.height_category}
+          value={selectedDog.height_category}
           onChange={handleChange}
         >
           <option value="micro">micro</option>
@@ -112,7 +124,7 @@ function EditDog(props) {
           type="text"
           required
           name="grade"
-          value={dogDetails.grade}
+          value={selectedDog.grade}
           onChange={handleChange}
         >
           <option value="Beg-Int">Beg-Int</option>

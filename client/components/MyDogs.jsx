@@ -1,4 +1,4 @@
-import { getDogs } from '../apiClient'
+// import { getDogs } from '../apiClient'
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
@@ -8,18 +8,8 @@ function MyDogs() {
   const displayDogs = useSelector((state) => state.dogDetails)
   const dispatch = useDispatch()
 
-  // const [dog, setDog] = useState([])
-  // const { dog_id } = useParams()
-
   useEffect(() => {
     dispatch(fetchDogs())
-    //   getDogs()
-    //     .then((resDogs) => {
-    //       dispatch(fetchDogs(resDogs))
-    //       // setDog(resDogs)
-    //       console.log(resDogs)
-    //     })
-    //     .catch((err) => console.error(err.message))
   }, [])
 
   return (
