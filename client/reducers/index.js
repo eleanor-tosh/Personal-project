@@ -1,7 +1,16 @@
 import { combineReducers } from 'redux'
 
-import dogDetails from './dogDetails'
+import dogReducer from './dogDetails'
+import ownerReducer from './ownerDetails'
 
-export default combineReducers({
-  dogDetails,
+const allReducers = combineReducers({
+  dogDetails: dogReducer,
+  ownerDetails: ownerReducer,
 })
+
+// export default combineReducers({
+//   dogDetails,
+//   ownerDetails,
+// })
+
+export default allReducers

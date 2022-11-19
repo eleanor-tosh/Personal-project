@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 // import { Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CreateShowEvents from './CreateShowEvents'
 
 function CreateShowForm() {
@@ -9,7 +10,6 @@ function CreateShowForm() {
       club: '',
       location: '',
       date: '',
-      day: '',
       setupTime: '',
       entriesTime: '',
       startTime: '',
@@ -17,7 +17,8 @@ function CreateShowForm() {
       entryB: '',
       contName: '',
       contEmail: '',
-      notes: '',
+      notes1: '',
+      notes2: '',
     },
   ])
 
@@ -57,8 +58,7 @@ function CreateShowForm() {
             />
             <label>Date:</label>
             <input type="text" required name="date" onChange={handleChange} />
-            <label>Day:</label>
-            <input type="text" required name="day" onChange={handleChange} />
+
             <label>Setup Time:</label>
             <input
               type="text"
@@ -118,8 +118,10 @@ function CreateShowForm() {
               name="contEmail"
               onChange={handleChange}
             />
-            <label>Notes:</label>
-            <textarea name="notes" onChange={handleChange}></textarea>
+            <label>Notes 1:</label>
+            <textarea name="notes1" onChange={handleChange}></textarea>
+            <label>Notes 2:</label>
+            <textarea name="notes2" onChange={handleChange}></textarea>
           </div>
         </form>
         <div>
@@ -129,6 +131,9 @@ function CreateShowForm() {
         </div>
       </div>
       <CreateShowEvents />
+      <Link to={`/poster`}>
+        <button>Make Poster</button>
+      </Link>
     </>
   )
 }

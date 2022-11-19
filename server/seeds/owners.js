@@ -13,7 +13,7 @@ exports.seed = async function (knex) {
       email: 'something@outlook.com',
       cell: '12345678',
       club: 'Southern Fly',
-      started: 'new Date(Date.now())',
+      started: new Date(Date.now()),
     },
     {
       owner_id: 100002,
@@ -22,7 +22,7 @@ exports.seed = async function (knex) {
       email: 'otherthing@outlook.com',
       cell: '13434345',
       club: 'Southern Fly',
-      started: 'new Date(Date.now())',
+      started: new Date(Date.now()),
     },
     {
       owner_id: 100003,
@@ -31,7 +31,7 @@ exports.seed = async function (knex) {
       email: 'youremail@outlook.com',
       cell: '13453554',
       club: 'Southern Fly',
-      started: 'new Date(Date.now())',
+      started: new Date(Date.now()),
     },
   ])
 }

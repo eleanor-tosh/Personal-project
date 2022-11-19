@@ -17,7 +17,7 @@ export function getDogs() {
 }
 
 export function getOwners() {
-  return request.get(`/api/v1/mydetails/`).then((response) => {
+  return request.get(`/api/v1/dog/mydetails/`).then((response) => {
     return response.body
   })
 }

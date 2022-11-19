@@ -28,6 +28,7 @@ function MyDogs() {
             <p>Height: {dog.height_mm}mm</p>
             <p>Height Category: {dog.height_category}</p>
             <p>Grade: {dog.grade}</p>
+            <p>Active Status: {dog.active}</p>
 
             <h2>Points</h2>
             <p>Beginner: {dog.beg_points}</p>
