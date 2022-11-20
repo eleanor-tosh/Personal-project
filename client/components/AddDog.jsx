@@ -38,10 +38,10 @@ function AddDog() {
       <div>
         <h1>Add Dog Form</h1>
         <form>
-          <label>Dogs Name: </label>
+          <label>Dog Name: </label>
           <input type="text" required name="dog_name" onChange={handleChange} />
 
-          <label>Dogs Registered Name: </label>
+          <label>Dog Registered Name: </label>
           <input type="text" name="reg_name" onChange={handleChange} />
 
           <label>Owner Name: </label>

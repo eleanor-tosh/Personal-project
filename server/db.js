@@ -10,6 +10,7 @@ module.exports = {
   getOwners,
   getShows,
   addShow,
+  getEvents,
 }
 
 function getDogs(db = connection) {
@@ -22,6 +23,10 @@ function getOwners(db = connection) {
 
 function getShows(db = connection) {
   return db('show').select()
+}
+
+function getEvents(db = connection) {
+  return db('events').select()
 }
 
 function addDog(dog, db = connection) {

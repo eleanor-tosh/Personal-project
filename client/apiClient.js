@@ -24,6 +24,12 @@ export function getShows() {
   })
 }
 
+export function getEvents() {
+  return request.get(`/api/v1/dog/events/`).then((response) => {
+    return response.body
+  })
+}
+
 export function addDog(dog) {
   return request
     .post('/api/v1/dog/')

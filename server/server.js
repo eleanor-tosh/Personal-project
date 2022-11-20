@@ -11,6 +11,7 @@ server.use(cors('*'))
 server.use('/api/v1/dog', routes)
 server.use('/api/v1/mydetails', routes)
 server.use('/api/v1/shows', routes)
+server.use('/api/v1/events', routes)
 
 server.get('*', (req, res) => {
   res.sendFile(path.resolve('server/public/index.html'))

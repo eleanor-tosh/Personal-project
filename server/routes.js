@@ -35,6 +35,14 @@ router.get('/poster/:show_id', (req, res) => {
     .catch(console.error)
 })
 
+router.get('/events', (req, res) => {
+  db.getEvents()
+    .then((event) => {
+      res.json(event)
+    })
+    .catch(console.error)
+})
+
 //Add Dog
 router.post('/', (req, res) => {
   const dog = req.body
