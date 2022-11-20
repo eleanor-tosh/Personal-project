@@ -69,6 +69,19 @@ router.post('/shows', (req, res) => {
     .catch(console.error)
 })
 
+//Delete Show
+router.delete('/shows/:show_id', (req, res) => {
+  const show_id = req.params.show_id
+  db.deleteShow(show_id)
+    .then(() => {
+      return db.getShows()
+    })
+    .then((shows) => {
+      res.json(shows)
+    })
+    .catch(console.error)
+})
+
 //Edit Dog Details
 // router.patch('/:dog_id', (req, res) => {
 //   const {

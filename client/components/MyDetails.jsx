@@ -21,7 +21,7 @@ function MyDetails() {
   const started = new Date(selectedOwnerDetails.started).toDateString()
 
   return (
-    <div>
+    <div className="mydetails">
       <h1>My Details</h1>
       {selectedOwnerDetails && (
         <div>

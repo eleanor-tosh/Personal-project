@@ -45,7 +45,7 @@ exports.seed = async function (knex) {
     {
       dog_id: 3,
       dog_name: 'Siren',
-      image: 'Siren-in-tiny-bed.jpg',
+      image: 'Siren.jpg',
       reg_name: 'Enchanted by the Siren Song',
       owner_name: 'Eleanor Tosh',
       owner_id: '100001',

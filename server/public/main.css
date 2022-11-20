@@ -20,30 +20,55 @@
 
 nav li {
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
 }
 
 nav {
-  background-color: aqua;
-  border-top: 2px solid #213C73;
-  border-bottom: 2px solid #213C73;
-  margin-bottom: 1rem;
+  background-color: #E0D9FF;
+  border-top: 2px solid #504970;
+  border-bottom: 2px solid #504970;
+  margin-bottom: 0.5rem;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .main-content {
-  float: left;
-  width: 85%;
-  background-color: bisque;
+  background-color: aliceblue;
+  border: 3px solid black;
+  margin: 5px; 
+  padding: 10px 15px;
+  line-height: 0.75rem;
+  border-radius: 10px;
+}
+
+.home-image {
+  height: 250px;
+  width: auto;
+  margin: 20px;
+  border-radius: 10px;
 }
 
 .header {
   text-align: center;
+  font-size: 2rem;;
 }
 
 .event-form {
-  background-color: bisque;
-  border-bottom: 2px solid black;
+  background-color: aliceblue;
+  border: 3px solid black;
+  margin: 5px; 
+  padding: 10px 15px;
+  line-height: 0.75rem;
+  border-radius: 10px;
+}
+
+.mydetails {
+  background-color: aliceblue;
+  border: 3px solid black;
+  margin: 5px; 
+  padding: 10px 15px;
+  line-height: 0.75rem;
+  border-radius: 10px;
 }
 
 input {
@@ -75,9 +100,9 @@ background-color: aliceblue;
 }
 
 .card-image {
-  border: 3px solid lightgray;
+  border: 3px solid black;
   width: auto;
-  height: 200px;
+  height: 300px;
   margin-right: 25px;
   border-radius: 10px;
 }
@@ -110,18 +135,18 @@ ul {
 }
 
 .poster-image {
-  border: 3px solid lightgray;
+  border: 3px solid black;
   width: 175px;
   height: 175px;
   margin-right: 25px
 }
 
 .poster-host {
-  color: rgb(80, 80, 212);
+  color: #504970;
   line-height: 2rem;
   font-size: 1.5rem;
   text-align: left;
-  border-bottom: 3px solid rgb(80, 80, 212);
+  border-bottom: 3px solid #504970;
 }
 
 .poster-times {
@@ -130,7 +155,7 @@ ul {
 }
 
 .poster-notes {
-  border-bottom: 3px solid rgb(80, 80, 212);
+  border-bottom: 3px solid #504970;
   font-style: italic;
 }
 
@@ -164,6 +189,9 @@ background-color: aliceblue;
 button {
   font-size: 1rem;
   margin: 0.25rem;
+  background-color: #E0D9FF;
+  border-radius: 10px;
+  border-width: 1px;
 }
 
 .wide-button {

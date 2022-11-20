@@ -8,7 +8,7 @@ exports.seed = async function (knex) {
   await knex('show').insert([
     {
       show_id: 1,
-      host_club: 'Southern Fly',
+      host_club: 'Southern Flygility Group',
       location: 'Forrester Park, Dunedin',
       date: new Date(Date.now()),
       setup_time: '9:00am',

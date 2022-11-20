@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { fetchShows } from '../actions'
+import { fetchShows, removeShow } from '../actions'
 
 function UpcomingShows() {
   const displayShows = useSelector((state) => state.showDetails)
@@ -10,6 +10,11 @@ function UpcomingShows() {
   useEffect(() => {
     dispatch(fetchShows())
   }, [])
+
+  function handleDelete(event, show) {
+    event.preventDefault()
+    dispatch(removeShow(show))
+  }
 
   return (
     <div>
@@ -34,6 +39,10 @@ function UpcomingShows() {
             <Link to={`/poster`}>
               <button>See Entries</button>
             </Link>
+
+            <button onClick={(event) => handleDelete(event, show.show_id)}>
+              Delete Show
+            </button>
           </div>
         )
       })}

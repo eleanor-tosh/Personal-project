@@ -1,7 +1,8 @@
-import { getShows, addShow } from '../apiClient.js'
+import { getShows, addShow, deleteShow } from '../apiClient.js'
 
 export const SET_SHOWS = 'SET_SHOWS'
 export const ADD_SHOW = 'ADD_SHOW'
+export const DELETE_SHOW = 'DELETE_SHOW'
 
 export function setShows(shows) {
   return {
@@ -24,5 +25,13 @@ export function submitShow(shows) {
     return addShow(shows).then((shows) => {
       dispatch(setShows(shows))
     })
+  }
+}
+
+//DELETE
+export function removeShow(shows) {
+  return {
+    type: DELETE_SHOW,
+    payload: shows,
   }
 }

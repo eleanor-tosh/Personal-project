@@ -5,7 +5,6 @@ import { fetchDogs } from '../actions'
 
 import Nav from './Nav'
 import Header from './Header'
-import Footer from './Footer'
 import Home from './Home'
 import CreateShowForm from './CreateShowForm'
 import Poster from './Poster'
@@ -17,6 +16,8 @@ import MyDetails from './MyDetails'
 import UpcomingShows from './UpcomingShows'
 import EnterShow from './EnterShow'
 import Entries from './Entries'
+import Clubs from './Clubs'
+import Rules from './Rules'
 
 function App() {
   const dispatch = useDispatch()
@@ -39,6 +40,8 @@ function App() {
           <Route path="/upcomingshows" element={<UpcomingShows />} />
           <Route path="/entershow" element={<EnterShow />} />
           <Route path="/entries" element={<Entries />} />
+          <Route path="/clubs" element={<Clubs />} />
+          <Route path="/rules" element={<Rules />} />
 
           <Route path="/dog/add" element={<AddDog />} />
 
@@ -46,7 +49,6 @@ function App() {
           <Route path="/dog/:dog_id/details" element={<EditDog />} />
           <Route path="/dog/:dog_id/points" element={<EditPoints />} />
         </Routes>
-        <Footer />
       </div>
     </>
   )

@@ -5,12 +5,13 @@ const connection = knex(config)
 module.exports = {
   getDogs,
   addDog,
-  patchDog,
-  patchPoints,
+  // patchDog,
+  // patchPoints,
   getOwners,
   getShows,
   addShow,
   getEvents,
+  deleteShow,
 }
 
 function getDogs(db = connection) {
@@ -37,39 +38,43 @@ function addShow(show, db = connection) {
   return db('show').insert(show)
 }
 
-function patchDog(
-  dog_id,
-  dog_name,
-  reg_name,
-  owner_name,
-  fly_num,
-  DOB,
-  height_mm,
-  height_category,
-  grade,
-  db = connection
-) {
-  return db('dogs').where('dog_id', dog_id).update({
-    dog_name,
-    reg_name,
-    owner_name,
-    fly_num,
-    DOB,
-    height_mm,
-    height_category,
-    grade,
-  })
+function deleteShow(show_id, db = connection) {
+  return db('show').del().where('show_id', show_id)
 }
 
-function patchPoints(
-  dog_id,
-  beg_points,
-  int_points,
-  sen_points,
-  adv_points,
-  db = connection
-) {
-  return db('dogs')
-    .where('dog_id', dog_id)
-    .update({ beg_points, int_points, sen_points, adv_points })
-}
+// function patchDog(
+//   dog_id,
+//   dog_name,
+//   reg_name,
+//   owner_name,
+//   fly_num,
+//   DOB,
+//   height_mm,
+//   height_category,
+//   grade,
+//   db = connection
+// ) {
+//   return db('dogs').where('dog_id', dog_id).update({
+//     dog_name,
+//     reg_name,
+//     owner_name,
+//     fly_num,
+//     DOB,
+//     height_mm,
+//     height_category,
+//     grade,
+//   })
+// }
+
+// function patchPoints(
+//   dog_id,
+//   beg_points,
+//   int_points,
+//   sen_points,
+//   adv_points,
+//   db = connection
+// ) {
+//   return db('dogs')
+//     .where('dog_id', dog_id)
+//     .update({ beg_points, int_points, sen_points, adv_points })
+// }

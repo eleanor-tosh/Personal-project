@@ -50,6 +50,13 @@ export function addShow(show) {
     .catch(console.error)
 }
 
+export function deleteShow(show) {
+  return request.delete(`/api/v1/dog/shows/${show}`).then((res) => {
+    console.log(res.body)
+    return res.body
+  })
+}
+
 // export function patchDog(dog_id, dog) {
 //   return request
 //     .patch(`/v1/dog/${dog_id}`)

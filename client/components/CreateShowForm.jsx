@@ -35,7 +35,7 @@ function CreateShowForm() {
     setShowDetails('')
 
     console.log(showDetails)
-    navigate('/upcomingshows')
+    // navigate('/upcomingshows')
   }
 
   return (
@@ -93,14 +93,13 @@ function CreateShowForm() {
             <label>Notes 2:</label>
             <textarea name="notes2" onChange={handleChange}></textarea>
           </div>
-        </form>
-        <div>
           <button onClick={handleSubmit} type="submit">
             Submit
           </button>
-        </div>
+        </form>
       </div>
-      {/* <CreateShowEvents /> */}
+
+      <CreateShowEvents />
       <Link to={`/upcomingshows`}>
         <button>Upcoming Shows</button>
       </Link>

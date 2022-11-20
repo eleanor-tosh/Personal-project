@@ -11,11 +11,6 @@ function Nav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about" activeclassname="active">
-            About
-          </NavLink>
-        </li>
-        <li>
           <NavLink to="/mydogs" activeclassname="active">
             My Dogs
           </NavLink>
