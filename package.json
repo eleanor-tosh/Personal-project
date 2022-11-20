@@ -37,6 +37,8 @@
     ]
   },
   "dependencies": {
+    "@mantine/core": "^5.8.2",
+    "@mantine/hooks": "^5.8.2",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "formik": "^2.2.9",

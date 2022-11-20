@@ -29,9 +29,17 @@ export function submitShow(shows) {
 }
 
 //DELETE
-export function removeShow(shows) {
-  return {
-    type: DELETE_SHOW,
-    payload: shows,
+// export function removeShow(shows) {
+//   return {
+//     type: DELETE_SHOW,
+//     payload: shows,
+//   }
+// }
+
+export function removeShow(show) {
+  return (dispatch) => {
+    return deleteShow(show).then((updatedShows) => {
+      dispatch(setShows(updatedShows))
+    })
   }
 }
