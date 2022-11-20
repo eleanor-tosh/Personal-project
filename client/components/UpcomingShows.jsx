@@ -23,7 +23,7 @@ function UpcomingShows() {
             <h2>Location {show.location}</h2>
             <p>Date: {date}</p>
             <Link to={`/poster/${show.show_id}`}>
-              <button>More Details</button>
+              <button>Tournament Poster</button>
             </Link>
             <Link to={`/poster`}>
               <button>Edit Details</button>

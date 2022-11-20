@@ -34,6 +34,16 @@ export function addDog(dog) {
     .catch(console.error)
 }
 
+export function addShow(show) {
+  return request
+    .post('/api/v1/dog/shows/')
+    .send(show)
+    .then((res) => {
+      return res.body
+    })
+    .catch(console.error)
+}
+
 // export function patchDog(dog_id, dog) {
 //   return request
 //     .patch(`/v1/dog/${dog_id}`)

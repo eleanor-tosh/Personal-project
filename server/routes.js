@@ -48,6 +48,19 @@ router.post('/', (req, res) => {
     .catch(console.error)
 })
 
+//Add Show
+router.post('/shows', (req, res) => {
+  const show = req.body
+  db.addShow(show)
+    .then(() => {
+      return db.getShows()
+    })
+    .then((show) => {
+      res.json(show)
+    })
+    .catch(console.error)
+})
+
 //Edit Dog Details
 // router.patch('/:dog_id', (req, res) => {
 //   const {

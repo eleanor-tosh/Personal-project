@@ -28,6 +28,7 @@ function EditDog() {
   if (!selectedDog) {
     return <div></div>
   }
+  console.log(selectedDog)
 
   function handleChange(event) {
     console.log(event.target.value)

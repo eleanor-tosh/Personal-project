@@ -1,21 +1,18 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { fetchShows } from '../actions'
 
 function Poster() {
+  const dispatch = useDispatch
   const { show_id } = useParams()
   const displayShow = useSelector((state) => state.showDetails)
-  const dispatch = useDispatch
 
-  useEffect(() => {
-    dispatch(fetchShows())
-  }, [])
-
-  const selectedShow = displayShow.find((show) => show_id === show.show_id)
+  const selectedShow = displayShow.find((show) => show_id == show.show_id)
   if (!selectedShow) {
     return <div></div>
   }
+
+  const date = new Date(selectedShow.date).toDateString()
 
   return (
     <div>
@@ -32,7 +29,7 @@ function Poster() {
             <div className="poster-host">
               <h2>Hosted by {selectedShow.host_club}</h2>
               <h2>{selectedShow.location}</h2>
-              <h2>{selectedShow.date}</h2>
+              <h2>{date}</h2>
             </div>
             <p>
               Cost: ${selectedShow.entryA_cost} per class for club members, $
