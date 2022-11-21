@@ -6,7 +6,6 @@ module.exports = {
   getDogs,
   addDog,
   patchDog,
-  // patchPoints,
   getOwners,
   getShows,
   addShow,
@@ -52,6 +51,10 @@ function patchDog(
   height_mm,
   height_category,
   grade,
+  beg_points,
+  int_points,
+  sen_points,
+  adv_points,
   db = connection
 ) {
   return db('dogs').where('dog_id', dog_id).update({
@@ -63,18 +66,9 @@ function patchDog(
     height_mm,
     height_category,
     grade,
+    beg_points,
+    int_points,
+    sen_points,
+    adv_points,
   })
 }
-
-// function patchPoints(
-//   dog_id,
-//   beg_points,
-//   int_points,
-//   sen_points,
-//   adv_points,
-//   db = connection
-// ) {
-//   return db('dogs')
-//     .where('dog_id', dog_id)
-//     .update({ beg_points, int_points, sen_points, adv_points })
-// }
