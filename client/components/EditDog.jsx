@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchDogs, patchDog } from '../apiClient'
-import { getByDisplayValue } from '@testing-library/react'
 
 function EditDog() {
   const navigate = useNavigate()

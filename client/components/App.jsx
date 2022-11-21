@@ -30,25 +30,27 @@ function App() {
       <div className="app">
         <Header />
         <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/createshowform" element={<CreateShowForm />} />
-          {/* <Route path="/createshowevents" element={<CreateShowEvents />} /> */}
+        <div className="body-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/createshowform" element={<CreateShowForm />} />
+            {/* <Route path="/createshowevents" element={<CreateShowEvents />} /> */}
 
-          <Route path="/mydogs" element={<MyDogs />} />
-          <Route path="/mydetails" element={<MyDetails />} />
-          <Route path="/upcomingshows" element={<UpcomingShows />} />
-          <Route path="/entershow" element={<EnterShow />} />
-          <Route path="/entries" element={<Entries />} />
-          <Route path="/clubs" element={<Clubs />} />
-          <Route path="/rules" element={<Rules />} />
+            <Route path="/mydogs" element={<MyDogs />} />
+            <Route path="/mydetails" element={<MyDetails />} />
+            <Route path="/upcomingshows" element={<UpcomingShows />} />
+            <Route path="/entershow" element={<EnterShow />} />
+            <Route path="/entries" element={<Entries />} />
+            <Route path="/clubs" element={<Clubs />} />
+            <Route path="/rules" element={<Rules />} />
 
-          <Route path="/dog/add" element={<AddDog />} />
+            <Route path="/dog/add" element={<AddDog />} />
 
-          <Route path="/poster/:show_id" element={<Poster />} />
-          <Route path="/dog/:dog_id/details" element={<EditDog />} />
-          <Route path="/dog/:dog_id/points" element={<EditPoints />} />
-        </Routes>
+            <Route path="/poster/:show_id" element={<Poster />} />
+            <Route path="/dog/:dog_id/details" element={<EditDog />} />
+            <Route path="/dog/:dog_id/points" element={<EditPoints />} />
+          </Routes>
+        </div>
       </div>
     </>
   )

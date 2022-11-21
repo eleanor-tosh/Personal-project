@@ -5,8 +5,8 @@
 .app {
   display: flex;
   flex-flow: column nowrap;
-  width: 80%;
-  margin: 0 auto;
+  /* width: 80%; */
+  /* margin: 50px; */
 }
 
 .active {
@@ -15,33 +15,37 @@
 
 .navList {
   list-style-type: none;
+  
 }
-
+a {
+  color: white;
+  text-decoration: none;
+}
 
 nav li {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
+  
 }
 
 nav {
-  background-color: #E0D9FF;
-  border-top: 2px solid #504970;
-  border-bottom: 2px solid #504970;
+  background-color: #504970;
   margin-bottom: 0.5rem;
   text-align: center;
   font-size: 1.5rem;
 }
 
-.main-content {
+.body-content {
   background-color: aliceblue;
-  border: 3px solid black;
-  margin: 5px; 
+  /* border: 3px solid black; */
+  margin: 20px; 
   padding: 10px 15px;
   line-height: 0.75rem;
   border-radius: 10px;
 }
 
 .home-image {
+  display: inline-block;
   height: 250px;
   width: auto;
   margin: 20px;
@@ -53,18 +57,18 @@ nav {
   font-size: 2rem;;
 }
 
-.event-form {
+form {
   background-color: aliceblue;
-  border: 3px solid black;
+  border: 2px solid black;
   margin: 5px; 
   padding: 10px 15px;
-  line-height: 0.75rem;
+  line-height: 2rem;
   border-radius: 10px;
 }
 
 .mydetails {
-  background-color: aliceblue;
-  border: 3px solid black;
+  background-color: rgb(245, 245, 245);
+  /* border: 2px solid black; */
   margin: 5px; 
   padding: 10px 15px;
   line-height: 0.75rem;
@@ -90,26 +94,49 @@ select {
 .dog-card {
 /* float: left; */
 background-color: aliceblue;
-  border: 3px solid black;
-  /* width: 29%; */
   margin: 5px; 
   padding: 10px 15px;
-  line-height: 0.75rem;
+  line-height: 0.75rem; 
   border-radius: 10px;
 }
 
 .card-image {
+  display:flex;
   border: 3px solid black;
   width: auto;
-  height: 300px;
+  height: 500px;
   margin-right: 25px;
   border-radius: 10px;
   vertical-align: middle;
 }
 
+button {
+  font-size: 1rem;
+  margin: 0.5rem !important;
+  padding: 0.75rem;
+  background-color: #504970;
+  color: white;
+  border-radius: 10px;
+  border-width: 1px;
+  border: none;
+}
 
+.event-checkboxes {
+  width: 50%;
+}
+
+.checkboxes {
+  margin: 10px 5px;
+  width: 20%
+}
+
+
+
+
+
+/* Poster */
 .poster {
-  background-color:aliceblue;
+  background-color:white;
   width: 800px;
   border: 3px solid black;
   margin: auto;
@@ -175,36 +202,4 @@ ul {
 .poster-event-title {
   font-size: 2rem;
   text-decoration: underline;
-}
-
-.show-card {
-background-color: aliceblue;
-  border: 3px solid black;
-  width: 97%;
-  margin: 5px; 
-  padding: 10px 15px;
-  border-radius: 10px;
-}
-
-button {
-  font-size: 1rem;
-  margin: 0.25rem;
-  background-color: #E0D9FF;
-  border-radius: 10px;
-  border-width: 1px;
-}
-
-.wide-button {
-  /* position: absolute; */
-  bottom: 0px;
-  width: 100%;
-}
-
-.event-checkboxes {
-  width: 50%;
-}
-
-.checkboxes {
-  margin: 10px 5px;
-  width: 20%
 }

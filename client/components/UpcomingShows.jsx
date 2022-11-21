@@ -23,7 +23,7 @@ function UpcomingShows() {
       {displayShows?.map((show) => {
         const date = new Date(show.date).toDateString()
         return (
-          <div className="show-card" key={show.show_id}>
+          <div className="mydetails" key={show.show_id}>
             <h2>Hosted By: {show.host_club}</h2>
             <h2>Location {show.location}</h2>
             <p>Date: {date}</p>

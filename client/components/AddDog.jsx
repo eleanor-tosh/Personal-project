@@ -41,7 +41,7 @@ function AddDog() {
           <label>Dog Name: </label>
           <input type="text" required name="dog_name" onChange={handleChange} />
 
-          <label>Dog Registered Name: </label>
+          <label>Registered Name: </label>
           <input type="text" name="reg_name" onChange={handleChange} />
 
           <label>Owner Name: </label>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Grid } from '@mantine/core'
 
 function Home() {
   return (
@@ -20,9 +21,31 @@ function Home() {
         Use this app to create tournaments, tournament posters, track your dogs
         details and eventually create tournament draws and export results.
       </p>
-      <img className="home-image" src={`/images/flygility4.jpg`} />
-      <img className="home-image" src={`/images/flygility1.jpg`} />
-      <img className="home-image" src={`/images/flygility6.jpg`} />
+      <Grid grow justify="center">
+        <Grid.Col span="auto">
+          <img
+            className="home-image"
+            src={`/images/flygility4.jpg`}
+            alt="dog getting ball at fly box"
+          />
+        </Grid.Col>
+
+        <Grid.Col span="auto">
+          <img
+            className="home-image"
+            src={`/images/flygility1.jpg`}
+            alt="dog gwatching flygility course"
+          />
+        </Grid.Col>
+
+        <Grid.Col span="auto">
+          <img
+            className="home-image"
+            src={`/images/flygility6.jpg`}
+            alt="dog getting ball at fly box"
+          />
+        </Grid.Col>
+      </Grid>
     </div>
   )
 }
