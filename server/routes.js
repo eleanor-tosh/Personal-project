@@ -83,38 +83,38 @@ router.delete('/shows/:show_id', (req, res) => {
 })
 
 //Edit Dog Details
-// router.patch('/:dog_id', (req, res) => {
-//   const {
-//     dog_name,
-//     reg_name,
-//     owner_name,
-//     fly_num,
-//     // DOB,
-//     height_mm,
-//     height_category,
-//     grade,
-//   } = req.body
-//   const dog_id = req.params.dog_id
-//   db.patchDog(
-//     dog_id,
-//     dog_name,
-//     reg_name,
-//     owner_name,
-//     fly_num,
-//     // DOB,
-//     height_mm,
-//     height_category,
-//     grade
-//   )
-//     .then((result) => {
-//       console.log(result)
-//       return db.getDogs()
-//     })
-//     .then((dogs) => {
-//       res.json(dogs)
-//     })
-//     .catch(console.error)
-// })
+router.patch('/:dog_id', (req, res) => {
+  const {
+    dog_name,
+    reg_name,
+    owner_name,
+    fly_num,
+    // DOB,
+    height_mm,
+    height_category,
+    grade,
+  } = req.body
+  const dog_id = req.params.dog_id
+  db.patchDog(
+    dog_id,
+    dog_name,
+    reg_name,
+    owner_name,
+    fly_num,
+    // DOB,
+    height_mm,
+    height_category,
+    grade
+  )
+    .then((result) => {
+      console.log(result)
+      return db.getDogs()
+    })
+    .then((dogs) => {
+      res.json(dogs)
+    })
+    .catch(console.error)
+})
 
 // //Edit Dog Points
 // router.patch('/:dog_id/points', (req, res) => {

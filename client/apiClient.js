@@ -57,15 +57,15 @@ export function deleteShow(show) {
   })
 }
 
-// export function patchDog(dog_id, dog) {
-//   return request
-//     .patch(`/v1/dog/${dog_id}`)
-//     .send(dog)
-//     .then((res) => {
-//       return res.body
-//     })
-//     .catch(console.error)
-// }
+export function patchDog(dog_id, dog) {
+  return request
+    .patch(`/api/v1/dog/${dog_id}`)
+    .send(dog)
+    .then((res) => {
+      return res.body
+    })
+    .catch(console.error)
+}
 
 // export function patchPoints(dog_id, dog) {
 //   return request

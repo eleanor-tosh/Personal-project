@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchDogs, patchDog } from '../apiClient'
+import { updateDogDetails } from '../actions'
 
 function EditDog() {
   const navigate = useNavigate()
@@ -24,7 +24,7 @@ function EditDog() {
 
   function handleSubmit(event) {
     event.preventDefault()
-    // dispatch(patchDog(dogDetails))
+    dispatch(updateDogDetails(dogDetails))
     navigate('/mydogs')
   }
   if (!dogDetails) {
