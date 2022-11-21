@@ -22,7 +22,7 @@ function MyDogs() {
             <div className="dog-card" key={i}>
               <Accordion.Item value={`doggo-${i}`}>
                 <Accordion.Control>
-                  <h2>{dog.dog_name}</h2>
+                  <h1>{dog.dog_name}</h1>
                 </Accordion.Control>
                 <Accordion.Panel>
                   <Grid grow justify="center">
@@ -31,6 +31,7 @@ function MyDogs() {
                         <img
                           className="card-image"
                           src={`/images/${dog.image}`}
+                          alt="dog"
                         />
                       </div>{' '}
                     </Grid.Col>
