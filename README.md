@@ -1,3 +1,22 @@
+# Flygility App started for my personal project for Dev Academy.
+
+The aim is to make an app for flygility competitions (a sport where two dogs race head-to-head to get a tennis ball and bring it back to their handler while accurately naivgating obstacles like tunnels and jumps).
+
+In the app you will be able:
+1. Create a tournament
+2. Create poster for the tournament that can be downloaded as an image to share on social media
+3. Edit/delete the event
+4. Participants can enter their dogs in the tournament with entry fees calculated
+5. A tournament draw created that matches dogs up to race
+6. Input results live to see which doggs and competing next
+7. Finalise results, send them out to competitors and the national organisation
+8. Users can have their own login to track their dogs results, add/update their dogs, club details, shows they have entered, and results from past shows.
+9. People can find out about flygility as a sport
+
+
+
+
+# Boilerplate Details:
 # Boilerplate: React with Webpack
 This is a starter project that uses webpack to transpile and bundle ES6 React code. 
 
