@@ -13,6 +13,7 @@ In the app you will be able:
 8. Users can have their own login to track their dogs results, add/update their dogs, club details, shows they have entered, and results from past shows.
 9. People can find out about flygility as a sport
 
+Tech goals: Practice React, Redux, database, internal API's, creating forms.
 
 
 
