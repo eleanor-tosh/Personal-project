@@ -16,10 +16,10 @@ exports.up = function (knex) {
     table.integer('height_mm')
     table.string('height_category')
     table.string('grade')
-    table.string('beg_points')
-    table.string('int_points')
-    table.string('sen_points')
-    table.string('adv_points')
+    table.integer('beg_points')
+    table.integer('int_points')
+    table.integer('sen_points')
+    table.integer('adv_points')
   })
 }
 

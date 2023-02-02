@@ -85,10 +85,10 @@ function EditDog() {
             value={dogDetails.height_category}
             onChange={handleChange}
           >
-            <option value="micro">micro</option>
-            <option value="mini">mini</option>
-            <option value="midi">midi</option>
-            <option value="maxi">maxi</option>
+            <option value="Micro">Micro</option>
+            <option value="Mini">Mini</option>
+            <option value="Midi">Midi</option>
+            <option value="Maxi">Maxi</option>
           </select>
 
           <label>Grade: </label>
@@ -103,7 +103,21 @@ function EditDog() {
             <option value="Int-Sen">Int-Sen</option>
             <option value="Sen-Adv">Sen-Adv</option>
           </select>
+
+          <label>Active Status: </label>
+          <select
+            type="text"
+            required
+            name="active"
+            value={dogDetails.active}
+            onChange={handleChange}
+          >
+            <option value="Training">Training</option>
+            <option value="Competing">Competing</option>
+            <option value="Retired">Retired</option>
+          </select>
         </form>
+
         <button onClick={handleSubmit} type="submit">
           Submit
         </button>

@@ -14,9 +14,9 @@ function AddDog() {
     fly_num: '',
     DOB: '',
     height_mm: '',
-    height_category: 'micro',
+    height_category: 'Micro',
     grade: 'Beg-Int',
-    active: 'training',
+    active: 'Training',
     image: 'cartooncollie.jpg',
   })
 
@@ -68,10 +68,10 @@ function AddDog() {
             name="height_category"
             onChange={handleChange}
           >
-            <option value="micro">micro</option>
-            <option value="mini">mini</option>
-            <option value="midi">midi</option>
-            <option value="maxi">maxi</option>
+            <option value="Micro">Micro</option>
+            <option value="Mini">Mini</option>
+            <option value="Midi">Midi</option>
+            <option value="Maxi">Maxi</option>
           </select>
 
           <label>Grade: </label>
@@ -81,11 +81,11 @@ function AddDog() {
             <option value="Sen-Adv">Sen-Adv</option>
           </select>
 
-          <label>Grade: </label>
+          <label>Active Status: </label>
           <select type="text" required name="active" onChange={handleChange}>
-            <option value="training">training</option>
-            <option value="competing">competing</option>
-            <option value="retired">retired</option>
+            <option value="Training">Training</option>
+            <option value="Competing">Competing</option>
+            <option value="Retired">Retired</option>
           </select>
 
           <label>Image: </label>

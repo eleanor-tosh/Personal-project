@@ -21,7 +21,7 @@ function EditPoints() {
     const { name, value } = event.target
     setDogDetails({ ...dogDetails, [name]: value })
   }
-  console.log(dogDetails)
+  // console.log(dogDetails)
   function handleSubmit(event) {
     event.preventDefault()
     dispatch(updateDogDetails(dogDetails))
@@ -37,7 +37,7 @@ function EditPoints() {
         <form>
           <label>Beginner Points: </label>
           <input
-            type="text"
+            type="integer"
             name="beg_points"
             value={dogDetails.beg_points}
             onChange={handleChange}
@@ -45,7 +45,7 @@ function EditPoints() {
 
           <label>Intermediate Points: </label>
           <input
-            type="text"
+            type="integer"
             name="int_points"
             value={dogDetails.int_points}
             onChange={handleChange}
@@ -53,7 +53,7 @@ function EditPoints() {
 
           <label>Senior Points: </label>
           <input
-            type="text"
+            type="integer"
             name="sen_points"
             value={dogDetails.sen_points}
             onChange={handleChange}
