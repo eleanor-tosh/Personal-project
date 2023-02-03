@@ -18,6 +18,10 @@ function AddDog() {
     grade: 'Beg-Int',
     active: 'Training',
     image: 'cartooncollie.jpg',
+    beg_points: '0',
+    int_points: '0',
+    sen_points: '0',
+    adv_points: '0',
   })
 
   function handleChange(event) {
