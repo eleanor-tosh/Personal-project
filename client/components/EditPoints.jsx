@@ -37,32 +37,44 @@ function EditPoints() {
         <form>
           <label>Beginner Points: </label>
           <input
-            type="integer"
+            type="number"
             name="beg_points"
+            min="0"
+            max="999"
+            step="0.5"
             value={dogDetails.beg_points}
             onChange={handleChange}
           />
 
           <label>Intermediate Points: </label>
           <input
-            type="integer"
+            type="number"
             name="int_points"
+            min="0"
+            max="999"
+            step="0.5"
             value={dogDetails.int_points}
             onChange={handleChange}
           />
 
           <label>Senior Points: </label>
           <input
-            type="integer"
+            type="number"
             name="sen_points"
+            min="0"
+            max="999"
+            step="0.5"
             value={dogDetails.sen_points}
             onChange={handleChange}
           />
 
           <label>Advanced Points: </label>
           <input
-            type="integer"
+            type="number"
             name="adv_points"
+            min="0"
+            max="999"
+            step="0.5"
             value={dogDetails.adv_points}
             onChange={handleChange}
           />
