@@ -126,4 +126,13 @@ router.patch('/:dog_id', (req, res) => {
     .catch(console.error)
 })
 
+//Edit Owner Deatils
+router.get('/mydetails/:owner_id/editmydetails', (req, res) => {
+  db.getOwners()
+    .then((owner) => {
+      res.json(owner)
+    })
+    .catch(console.error)
+})
+
 module.exports = router

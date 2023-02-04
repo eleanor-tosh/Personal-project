@@ -41,6 +41,7 @@ function EditDog() {
             required
             name="dog_name"
             value={dogDetails.dog_name}
+            maxLength={50}
             onChange={handleChange}
           />
 
@@ -49,6 +50,7 @@ function EditDog() {
             type="text"
             name="reg_name"
             value={dogDetails.reg_name}
+            maxLength={50}
             onChange={handleChange}
           />
 
@@ -58,6 +60,7 @@ function EditDog() {
             required
             name="owner_name"
             value={dogDetails.owner_name}
+            maxLength={50}
             onChange={handleChange}
           />
 
@@ -66,13 +69,16 @@ function EditDog() {
             type="integer"
             name="fly_num"
             value={dogDetails.fly_num}
+            maxLength={50}
             onChange={handleChange}
           />
 
           <label>Height in mm: </label>
           <input
-            type="integer"
+            type="number"
             name="height_mm"
+            min="100"
+            max="900"
             value={dogDetails.height_mm}
             onChange={handleChange}
           />

@@ -33,7 +33,9 @@ function MyDetails() {
           <h2>Email: {selectedOwnerDetails.email}</h2>
           <h2>Cell: {selectedOwnerDetails.cell}</h2>
           <h2>Club: {selectedOwnerDetails.club}</h2>
-          <Link to={`/`}>
+          <Link
+            to={`/mydetails/${selectedOwnerDetails.owner_id}/editmydetails`}
+          >
             <button>Edit Details</button>
           </Link>
         </div>

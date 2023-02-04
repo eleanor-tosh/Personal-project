@@ -11,6 +11,7 @@ module.exports = {
   addShow,
   getEvents,
   deleteShow,
+  patchOwner,
 }
 
 function getDogs(db = connection) {
@@ -72,5 +73,25 @@ function patchDog(
     int_points,
     sen_points,
     adv_points,
+  })
+}
+
+function patchOwner(
+  owner_id,
+  firstname,
+  lastname,
+  email,
+  cell,
+  club,
+  started,
+  db = connection
+) {
+  return db('owners').where('owner_id', owner_id).update({
+    firstname,
+    lastname,
+    email,
+    cell,
+    club,
+    started,
   })
 }

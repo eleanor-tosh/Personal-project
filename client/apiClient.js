@@ -66,3 +66,13 @@ export function patchDog(dog_id, dog) {
     })
     .catch(console.error)
 }
+
+export function patchOwner(owner_id, owner) {
+  return request
+    .patch(`/api/v1/dog/mydetails/${owner_id}/editmydetails/`)
+    .send(owner)
+    .then((res) => {
+      return res.body
+    })
+    .catch(console.error)
+}

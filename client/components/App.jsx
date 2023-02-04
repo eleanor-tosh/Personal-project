@@ -18,6 +18,7 @@ import EnterShow from './EnterShow'
 import Entries from './Entries'
 import Clubs from './Clubs'
 import Rules from './Rules'
+import EditMyDetails from './EditMyDetails'
 
 function App() {
   const dispatch = useDispatch()
@@ -49,6 +50,10 @@ function App() {
             <Route path="/poster/:show_id" element={<Poster />} />
             <Route path="/dog/:dog_id/details" element={<EditDog />} />
             <Route path="/dog/:dog_id/points" element={<EditPoints />} />
+            <Route
+              path="/mydetails/:owner_id/editmydetails"
+              element={<EditMyDetails />}
+            />
           </Routes>
         </div>
       </div>

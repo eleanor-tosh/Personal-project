@@ -10,11 +10,11 @@ function AddDog() {
   const [newDog, setNewDog] = useState({
     dog_name: '',
     reg_name: '',
-    owner_name: '',
+    owner_name: 'Eleanor Tosh',
     fly_num: '',
     DOB: '',
     height_mm: '',
-    height_category: 'Micro',
+    height_category: '',
     grade: 'Beg-Int',
     active: 'Training',
     image: 'cartooncollie.jpg',
@@ -43,27 +43,54 @@ function AddDog() {
         <h1>Add Dog Form</h1>
         <form>
           <label>Dog Name: </label>
-          <input type="text" required name="dog_name" onChange={handleChange} />
+          <input
+            type="text"
+            required
+            name="dog_name"
+            placeholder="Dog Name"
+            maxLength={50}
+            onChange={handleChange}
+          />
 
           <label>Registered Name: </label>
-          <input type="text" name="reg_name" onChange={handleChange} />
+          <input
+            type="text"
+            name="reg_name"
+            maxLength={50}
+            placeholder="NZKC name or the same as above"
+            onChange={handleChange}
+          />
 
-          <label>Owner Name: </label>
+          {/* <label>Owner Name: </label>
           <input
             type="text"
             required
             name="owner_name"
+            maxLength={50}
             onChange={handleChange}
-          />
+          /> */}
 
           <label>Flygility Number: </label>
-          <input type="integer" name="fly_num" onChange={handleChange} />
+          <input
+            type="integer"
+            name="fly_num"
+            placeholder="00/000/0"
+            maxLength={8}
+            onChange={handleChange}
+          />
 
           <label>DOB: </label>
           <input type="date" name="DOB" onChange={handleChange} />
 
           <label>Height in mm: </label>
-          <input type="integer" name="height_mm" onChange={handleChange} />
+          <input
+            type="number"
+            name="height_mm"
+            min="100"
+            max="900"
+            placeholder="500"
+            onChange={handleChange}
+          />
 
           <label>Height Category: </label>
           <select
@@ -93,7 +120,13 @@ function AddDog() {
           </select>
 
           <label>Image: </label>
-          <input type="text" name="image" onChange={handleChange} />
+          <input
+            type="text"
+            name="image"
+            maxLength={100}
+            placeholder="Leave blank for default image"
+            onChange={handleChange}
+          />
         </form>
         <button onClick={handleSubmit} type="submit">
           Submit
