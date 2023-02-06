@@ -27,8 +27,11 @@ function AddDog() {
   const [errors, setErrors] = useState({})
 
   const flygilityNumberRegEx = /^$|^\d{2}\/\d{3}\/\d{2}$|^\d{2}\/\d{3}\/\d{1}$/
+  const heightNumberRegEx =
+    /^$|^(0(\.\d{0,1}[05])?|[1-9]\d{0,2}(\.\d{0,1}[05])?)$/
 
   function handleChange(event) {
+    console.log(event.target.value)
     const { name, value } = event.target
     setNewDog((result) => {
       return { ...result, [name]: value }
@@ -43,6 +46,11 @@ function AddDog() {
     if (!String(newDog.fly_num).match(flygilityNumberRegEx)) {
       newErrors.fly_num =
         'Flygility number must be left blank if unknown or in the format 00/000/0 or 00/000/00'
+    }
+
+    if (!String(newDog.height_mm).match(heightNumberRegEx)) {
+      newErrors.height_mm =
+        'You have either entered your dogs height incorrectly, I doubt your dog is that tall'
     }
 
     setErrors(newErrors)
@@ -98,10 +106,8 @@ function AddDog() {
                 placeholder="00/000/0"
                 onChange={handleChange}
               />
-            </label>{' '}
-            <p style={{ color: 'red' }}>
-              {errors.fly_num && <div>{errors.fly_num}</div>}
-            </p>
+            </label>
+            <p style={{ color: 'red' }}>{errors.fly_num}</p>
           </div>
 
           <label>
@@ -109,17 +115,20 @@ function AddDog() {
             <input type="date" name="DOB" onChange={handleChange} />
           </label>
 
-          <label>
-            Height in mm:
-            <input
-              type="number"
-              name="height_mm"
-              min="100"
-              max="900"
-              placeholder="500"
-              onChange={handleChange}
-            />
-          </label>
+          <div>
+            <label>
+              Height in mm:
+              <input
+                type="number"
+                name="height_mm"
+                min="100"
+                max="999"
+                placeholder="500"
+                onChange={handleChange}
+              />
+            </label>
+            <p style={{ color: 'red' }}>{errors.height_mm}</p>
+          </div>
 
           <label>
             Height Category:
