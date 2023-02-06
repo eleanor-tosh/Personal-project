@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { fetchDogs } from '../actions'
 
 import Nav from './Nav'
-import Header from './Header'
+// import Header from './Header'
 import Home from './Home'
 import CreateShowForm from './CreateShowForm'
 import Poster from './Poster'
@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <Header />
+        {/* <Header /> */}
         <Nav />
         <div className="body-content">
           <Routes>
