@@ -12,7 +12,6 @@ function EditPoints() {
   const [dogDetails, setDogDetails] = useState(null)
 
   const [errors, setErrors] = useState({})
-  const [success, setSuccess] = useState()
 
   const numberValidationRegEx =
     /^(0(\.\d{0,1}[05])?|[1-9]\d{0,2}(\.\d{0,1}[05])?)$/
@@ -23,11 +22,9 @@ function EditPoints() {
   }, [])
 
   function handleChange(event) {
-    console.log(event.target.value)
     const { name, value } = event.target
     setDogDetails({ ...dogDetails, [name]: value })
   }
-  // console.log(dogDetails)
   function handleSubmit(event) {
     event.preventDefault()
 
@@ -56,7 +53,6 @@ function EditPoints() {
 
     if (Object.keys(newErrors).length === 0) {
       dispatch(updateDogDetails(dogDetails))
-      setSuccess(true)
       navigate('/mydogs')
     }
   }
@@ -69,55 +65,63 @@ function EditPoints() {
 
         <form>
           <div>
-            <label>Beginner Points: </label>
-            <input
-              type="number"
-              name="beg_points"
-              min="0"
-              max="999"
-              step="0.5"
-              value={dogDetails.beg_points}
-              onChange={handleChange}
-            />
+            <label>
+              Beginner Points:
+              <input
+                type="number"
+                name="beg_points"
+                min="0"
+                max="999"
+                step="0.5"
+                value={dogDetails.beg_points}
+                onChange={handleChange}
+              />
+            </label>
           </div>
 
           <div>
-            <label>Intermediate Points: </label>
-            <input
-              type="number"
-              name="int_points"
-              min="0"
-              max="999"
-              step="0.5"
-              value={dogDetails.int_points}
-              onChange={handleChange}
-            />
+            <label>
+              Intermediate Points:
+              <input
+                type="number"
+                name="int_points"
+                min="0"
+                max="999"
+                step="0.5"
+                value={dogDetails.int_points}
+                onChange={handleChange}
+              />
+            </label>
           </div>
 
           <div>
-            <label>Senior Points: </label>
-            <input
-              type="number"
-              name="sen_points"
-              min="0"
-              max="999"
-              step="0.5"
-              value={dogDetails.sen_points}
-              onChange={handleChange}
-            />
+            <label>
+              Senior Points:
+              <input
+                type="number"
+                name="sen_points"
+                min="0"
+                max="999"
+                step="0.5"
+                value={dogDetails.sen_points}
+                onChange={handleChange}
+              />
+            </label>
           </div>
 
           <div>
-            <label>Advanced Points: </label>
-            <input
-              type="number"
-              name="adv_points"
-              min="0"
-              max="999"
-              step="0.5"
-              value={dogDetails.adv_points}
-              onChange={handleChange}
-            />
+            <label>
+              Advanced Points:
+              <input
+                type="number"
+                name="adv_points"
+                min="0"
+                max="999"
+                step="0.5"
+                value={dogDetails.adv_points}
+                onChange={handleChange}
+              />
+            </label>
           </div>
         </form>
 
